@@ -7,4 +7,8 @@ terraform {
   }
 }
 
-provider "oci" {}
+variable "private_key" {}
+
+provider "oci" {
+  private_key = var.private_key
+}
