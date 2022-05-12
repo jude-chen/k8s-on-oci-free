@@ -8,8 +8,9 @@ terraform {
 }
 
 variable "private_key" {
-    type = string
-    default = "-----BEGIN PRIVATE KEY-----
+  type    = string
+  default = <<EOF
+-----BEGIN PRIVATE KEY-----
 MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDGbPTFNtPVKZNU
 XuZXVKvTmliiDwgFyqywodtmFlJRBUXX/LNfC5m9h+aw3Vdzzxvl1q8cf0zE9xKj
 gFf3KfPeP0XFtxmoRqRt/8adnH6AAqWRns4QTF1Qvm3BfMqfkXQSxmzSH5XXjKo+
@@ -36,7 +37,8 @@ UHAzRpoiHnzI3QrVMzJD2KjizD+lghcpjBiIvKVLAoGAIlFtK1tqFHZjaebz2/Hl
 voO0jbe8NGbG8qKs3kIwEX4lBQdeeASTM0I4c6RNHGcWdomtJ0MmG4ho+NnPpelT
 jyu4o48ZbgAnojOu4HK/nNe4AjpnsJ4zN7CEE6J3Z4EDgP7sItKm73PnR7MAzmef
 pbWykE5BB/PnoEr2MXsJUjM=
------END PRIVATE KEY-----"
+-----END PRIVATE KEY-----
+EOF
 }
 
 provider "oci" {
