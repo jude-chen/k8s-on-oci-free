@@ -8,6 +8,7 @@ terraform {
 }
 
 variable "private_key" {
+  type = string
   default = <<EOF
 -----BEGIN RSA PRIVATE KEY-----
 Proc-Type: 4,ENCRYPTED
